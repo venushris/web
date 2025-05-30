@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras de Datos - Ecolyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #a5d6a7;
+            pointer-events: none;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Press Start 2P', monospace;
+            color: #2e7d32;
+            background-color: #a5d6a7;
+            background-image: url('https://www.transparenttextures.com/patterns/leaf.png');
+            background-repeat: repeat;
+            background-size: auto;
+        }
+
+        nav {
+            background-color: #558b2f;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 0.75rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            padding: 1.5rem;
+            background-color: #81c784;
+            border-bottom: 4px solid #388e3c;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            color: #1b5e20;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .seccion {
+            background: #f1f8e9;
+            border: 4px dotted #c5e1a5;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 0.9rem;
+            color: #33691e;
+            margin-bottom: 1rem;
+            border-bottom: 2px dashed #a5d6a7;
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 0.7rem;
+            line-height: 1.8;
+            color: #2e7d32;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.8rem;
+            background: #aed581;
+            border: 3px solid #33691e;
+            color: #1b5e20;
+            border-radius: 0;
+            cursor: pointer;
+            box-shadow: 4px 4px #33691e;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .btn-volver:hover {
+            transform: translateY(-2px);
+            background-color: #dce775;
+        }
+
+        footer {
+            font-size: 0.6rem;
+            margin-top: 3rem;
+            color: #4e342e;
+            background-color: #c8e6c9;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <h1>📚 Estructuras de Datos en Ecolyzer</h1>
+    </header>
+
+    <div class="container">
+        <div class="seccion">
+            <h2>🌳 Árboles Binarios</h2>
+            <p>Utilizados para organizar zonas reforestadas. Cada nodo representa una zona con niveles de salud ecológica. Los árboles binarios permiten búsquedas eficientes de áreas específicas y facilitan la gestión del ecosistema del juego.</p>
+        </div>
+
+        <div class="seccion">
+            <h2>👾 Listas Enlazadas</h2>
+            <p>Se usan para manejar la lista de enemigos activos en pantalla. Permiten eliminar enemigos destruidos fácilmente y agregar nuevos enemigos de manera dinámica durante el gameplay.</p>
+        </div>
+
+        <div class="seccion">
+            <h2>🎒 Pilas y Colas</h2>
+            <p>Las pilas gestionan el historial de acciones del jugador (último en entrar, primero en salir). Las colas controlan la aparición secuencial de elementos del mapa y eventos programados en el juego.</p>
+        </div>
+
+        <div class="seccion">
+            <h2>💾 Mapas/Hashmaps</h2>
+            <p>Asocian identificadores únicos a cada objeto del juego (enemigos, árboles, zonas) permitiendo acceso rápido a los elementos. También se usan para almacenar configuraciones y preferencias del jugador.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="inicio.html" class="btn-volver">← Volver al inicio</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Yoico Team | Ecolyzer - Proyecto estudiantil por el medio ambiente.
+    </footer>
+
+    <!-- Script de partículas -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 40, density: { enable: true, value_area: 800 } },
+                color: { value: "#4caf50" },
+                shape: { type: "circle" },
+                opacity: { value: 0.3, random: true },
+                size: { value: 5, random: true },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: "none",
+                    out_mode: "out"
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" }
+                },
+                modes: {
+                    repulse: { distance: 100 },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>
