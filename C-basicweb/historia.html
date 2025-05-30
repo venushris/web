@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Historia del Personaje - Ecolyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Press Start 2P', monospace;
+            color: #2e7d32;
+            background-color: #a5d6a7;
+            background-image: url('https://www.transparenttextures.com/patterns/leaf.png');
+            background-repeat: repeat;
+            background-size: auto;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #a5d6a7;
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 4px solid #388e3c;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        p {
+            max-width: 700px;
+            margin: 1rem auto;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .marco {
+            background: #f1f8e9;
+            border: 4px solid #a5d6a7;
+            margin: 2rem auto;
+            max-width: 700px;
+            padding: 1rem;
+            box-shadow: 4px 4px 0px #81c784;
+            transition: transform 0.2s ease;
+        }
+
+        .marco:hover {
+            transform: scale(1.02);
+        }
+
+        .marco img {
+            width: 120px;
+            height: auto;
+            display: block;
+            margin: 0 auto 1rem;
+        }
+
+        .marco h2 {
+            font-size: 0.9rem;
+            color: #1b5e20;
+            margin-bottom: 0.5rem;
+        }
+
+        .marco p {
+            font-size: 0.65rem;
+            color: #33691e;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        a.btn-volver {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            background: #aed581;
+            border: 3px solid #33691e;
+            color: #1b5e20;
+            border-radius: 0;
+            cursor: pointer;
+            box-shadow: 4px 4px #33691e;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        a.btn-volver:hover {
+            transform: translateY(-2px);
+            background-color: #dce775;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <h1>🌿 Historia del Personaje 🌍</h1>
+
+    <p>
+        Nuestro héroe, llamado Eco, es un guardián del planeta que desde pequeño se comprometió a restaurar la
+        naturaleza dañada por la contaminación. Armado con su energía y conocimiento, viaja por tierras devastadas
+        plantando árboles, limpiando ríos y luchando contra las fuerzas que amenazan el equilibrio ecológico.
+    </p>
+    <p>
+        A medida que avanzas en el juego, conocerás más sobre su pasado, su misión y cómo se convierte en el símbolo de
+        esperanza para un mundo mejor.
+    </p>
+
+    <!-- MARCOS de personajes/enemigos -->
+    <div class="marco">
+        <img src="personaje_protagonista.png" alt="Eco, el Guardián Verde" />
+        <h2>🌱 Eco, el Guardián Verde</h2>
+        <p>El héroe del juego. Fue creado por la Tierra para restaurar el equilibrio. Su misión es limpiar, plantar y proteger.</p>
+    </div>
+
+    <div class="marco">
+        <img src="enemigo_1.png" alt="Smogger" />
+        <h2>💀 Smogger</h2>
+        <p>Un espíritu del aire contaminado. Viaja dejando humo tóxico que debilita a Eco.</p>
+    </div>
+
+    <div class="marco">
+        <img src="enemigo_2.png" alt="Oilon" />
+        <h2>🪨 Oilon</h2>
+        <p>Monstruo creado por derrames de petróleo. Envenena los mares y destruye arrecifes.</p>
+    </div>
+
+    <div class="marco">
+        <img src="curacion_1.png" alt="Árbol Vital" />
+        <h2>🌳 Árbol Vital</h2>
+        <p>Recurso de curación. Al interactuar, Eco recupera energía y esperanza.</p>
+    </div>
+
+    <a href="inicio.html" class="btn-volver">⬅ Volver al inicio</a>
+
+    <!-- Partículas -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 40, density: { enable: true, value_area: 800 } },
+                color: { value: "#4caf50" },
+                shape: { type: "circle" },
+                opacity: { value: 0.3, random: true },
+                size: { value: 5, random: true },
+                move: { enable: true, speed: 1, direction: "none", out_mode: "out" }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" }
+                },
+                modes: {
+                    repulse: { distance: 100 },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+
+</html>

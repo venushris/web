@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecolyzer - Un juego por el planeta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <style>
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #a5d6a7;
+            pointer-events: none;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Press Start 2P', monospace;
+            color: #2e7d32;
+            text-align: center;
+            background-color: #a5d6a7;
+            background-image: url('https://www.transparenttextures.com/patterns/leaf.png');
+            background-repeat: repeat;
+            background-size: auto;
+        }
+
+        nav {
+            background-color: #558b2f;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 0.75rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            padding: 1.5rem;
+            background-color: #81c784;
+            border-bottom: 4px solid #388e3c;
+        }
+
+        header img {
+            width: 200px;
+            max-width: 80%;
+        }
+
+        h1 {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .video-container {
+            margin: 2rem auto;
+            max-width: 800px;
+            border: 6px dashed #66bb6a;
+            background-color: #f1f8e9;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        iframe {
+            width: 100%;
+            height: 450px;
+        }
+
+        .btn-jugar {
+            display: inline-block;
+            margin: 1rem 0.5rem;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            background: #aed581;
+            border: 3px solid #33691e;
+            color: #1b5e20;
+            border-radius: 0;
+            cursor: pointer;
+            box-shadow: 4px 4px #33691e;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .btn-jugar:hover {
+            transform: translateY(-2px);
+            background-color: #dce775;
+        }
+
+        .btn-secundario {
+            background: #8bc34a;
+            color: #fff;
+        }
+
+        .seccion {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #f1f8e9;
+            border: 4px dotted #c5e1a5;
+        }
+
+        .redes a {
+            margin: 1rem;
+            color: #2e7d32;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+
+        footer {
+            font-size: 0.6rem;
+            margin-top: 3rem;
+            color: #4e342e;
+            background-color: #c8e6c9;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <header id="inicio">
+        <img src="Ecolyzer_logo.png" alt="Logo de Ecolyzer" />
+        <h1>🌿 Ecolyzer: Un juego por el planeta 🌍</h1>
+    </header>
+
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/TU_VIDEO" title="Tráiler de Ecolyzer" allowfullscreen></iframe>
+    </div>
+
+    <a href="jugar.html" class="btn-jugar">🌱 JUGAR AHORA</a>
+    <a href="historia.html" class="btn-jugar btn-secundario">📖 Historia del personaje</a>
+    <a href="estructuras.html" class="btn-jugar" style="background:#c5e1a5; border-color:#33691e; color:#2e7d32;">
+    🧩 Ver estructuras del juego
+</a>
+
+
+    <div class="seccion">
+        <h2>¿De qué trata Ecolyzer?</h2>
+        <p>
+            Ecolyzer es un videojuego en pixel art donde deberás restaurar un mundo contaminado, plantar árboles,
+            limpiar océanos y derrotar enemigos que amenazan el equilibrio ecológico. ¡Todo mientras disfrutas de una
+            estética retro!
+        </p>
+    </div>
+
+    <div class="seccion" id="equipo">
+        <h2>👾 Equipo de desarrollo</h2>
+        <ul style="list-style: none; padding-left: 0;">
+            <li>Gerente de proyecto: Daniel Garcia N.</li>
+            <li>Director de diseño: Christopher Braun R.</li>
+            <li>Director de documentación: José Samur B.</li>
+            <li>Director de pruebas: Eduardo Esper S.</li>
+            <li>Director de UI/UX: Ivan Iguaran C.</li>
+        </ul>
+    </div>
+
+    <div class="seccion" id="contacto">
+        <h2>📬 Contáctanos</h2>
+        <p>¿Tienes sugerencias o comentarios?</p>
+        <p>Escríbenos a: <a href="mailto:ecolyzergame@gmail.com">ecolyzergame@gmail.com</a></p>
+    </div>
+
+    <div class="redes">
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">Discord</a>
+    </div>
+
+    <footer>
+        &copy; 2025 Yoico Team | Ecolyzer - Proyecto estudiantil por el medio ambiente.
+    </footer>
+
+    <!-- Script de partículas -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 40, density: { enable: true, value_area: 800 } },
+                color: { value: "#4caf50" },
+                shape: { type: "circle" },
+                opacity: { value: 0.3, random: true },
+                size: { value: 5, random: true },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: "none",
+                    out_mode: "out"
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" }
+                },
+                modes: {
+                    repulse: { distance: 100 },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+
+</html>
